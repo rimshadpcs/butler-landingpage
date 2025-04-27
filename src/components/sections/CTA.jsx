@@ -5,7 +5,7 @@ const CTA = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="max-w-5xl mx-auto bg-black text-white rounded-2xl overflow-hidden shadow-xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -20,23 +20,21 @@ const CTA = () => {
               <p className="text-gray-300 text-lg mb-8">
                 AlfredX is your full-stack startup team — in one chat. Try it free. Build smarter.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="#signup" 
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-black font-medium rounded hover:bg-gray-100 transition-colors"
+                <a
+                  href="#signup"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   🔥 Start Now →
                 </a>
-                <a 
-                  href="#copilots" 
-                  className="inline-flex items-center justify-center px-6 py-3 border border-white text-white font-medium rounded hover:bg-white/10 transition-colors"
+                <a
+                  href="#copilots"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-white text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
                 >
-                  💬 Or Meet the Copilots →
+                  💬 Meet the Copilots
                 </a>
               </div>
             </div>
-            
             <div className="flex-shrink-0 w-full md:w-2/5">
               <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
                 <div className="flex items-center mb-6">
@@ -48,7 +46,6 @@ const CTA = () => {
                     <p className="text-gray-300 text-sm">AI Co-Founder</p>
                   </div>
                 </div>
-                
                 <div className="space-y-4">
                   <div className="flex">
                     <div className="w-10 h-10 rounded-md bg-blue-900/20 flex items-center justify-center mr-3 flex-shrink-0">
@@ -58,13 +55,11 @@ const CTA = () => {
                       <p className="text-sm">Let's build something amazing together.</p>
                     </div>
                   </div>
-                  
                   <div className="flex justify-end">
                     <div className="bg-black border border-gray-700 rounded-lg p-3 max-w-xs">
                       <p className="text-sm">I'm ready to get started!</p>
                     </div>
                   </div>
-                  
                   <div className="flex">
                     <div className="w-10 h-10 rounded-md bg-green-900/20 flex items-center justify-center mr-3 flex-shrink-0">
                       <span className="text-green-400 text-xs">🧑‍💻</span>

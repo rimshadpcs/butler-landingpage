@@ -56,15 +56,6 @@ const copilots = [
     textColor: 'text-red-400',
     description: 'Creates tactical launch plans, timelines, assets',
     expertise: ['Launch strategy', 'Marketing assets', 'PR planning', 'Launch timeline']
-  },
-  { 
-    id: 'agent-led-gtm',
-    name: 'Agent-Led GTM Copilot',
-    icon: '🧠',
-    color: 'bg-indigo-900/20',
-    textColor: 'text-indigo-400',
-    description: 'Autonomously runs tests, growth loops & experiments',
-    expertise: ['Growth experiments', 'Autonomous testing', 'Data analysis', 'Growth optimization']
   }
 ];
 
@@ -108,7 +99,7 @@ const Copilots = () => {
         </motion.div>
         
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* copilots Selector */}
+          {/* Copilots Selector */}
           <motion.div 
             className="lg:w-1/3"
             variants={containerVariants}

@@ -47,7 +47,7 @@ const Problem = () => {
                 variants={itemVariants}
               >
                 <span className="text-xl mr-3">❌</span>
-                <span className="text-lg text-gray-700">Starting with small team or alone is overwhelming</span>
+                <span className="text-lg text-gray-700">Starting with a small team or alone is overwhelming</span>
               </motion.li>
               <motion.li 
                 className="flex items-start"
@@ -74,7 +74,7 @@ const Problem = () => {
                 <h3 className="text-xl font-bold">The Solution</h3>
               </div>
               <p className="text-gray-200">
-                Alfred Ai gives you a tactical squad of AI copilots — built just for founders
+                Alfred AI gives you a tactical squad of AI copilots — built just for founders
               </p>
             </motion.div>
           </motion.div>
@@ -103,7 +103,7 @@ const Problem = () => {
               </div>
               
               <p className="bg-gray-100 p-4 rounded-lg mb-6 text-gray-800">
-              I’m building “Catflix” — a streaming app exclusively for cat videos. What’s our GTM plan?
+                I'm building "Catflix" — a streaming app exclusively for cat videos. What's our GTM plan?
               </p>
               
               {/* Copilot Responses */}
@@ -116,7 +116,7 @@ const Problem = () => {
                   <div className="ml-4 flex-1">
                     <h4 className="text-sm font-bold">Market Research Copilot</h4>
                     <div className="bg-gray-100 p-3 rounded-lg mt-1">
-                      <p className="text-sm text-gray-800">Let’s first segment your audience: Gen Z meme lovers, lonely millennials, or retired cat moms?</p>
+                      <p className="text-sm text-gray-800">Let's first segment your audience: Gen Z meme lovers, lonely millennials, or retired cat moms?</p>
                     </div>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ const Problem = () => {
                   <div className="ml-4 flex-1">
                     <h4 className="text-sm font-bold">Monetization & GTM Copilot</h4>
                     <div className="bg-gray-100 p-3 rounded-lg mt-1">
-                      <p className="text-sm text-gray-800">Purrfect. Let’s test a freemium model with unlockable meow filters. I’ll outline a 3-step GTM to go viral on TikTok.</p>
+                      <p className="text-sm text-gray-800">Purrfect. Let's test a freemium model with unlockable meow filters. I'll outline a 3-step GTM to go viral on TikTok.</p>
                     </div>
                   </div>
                 </div>
