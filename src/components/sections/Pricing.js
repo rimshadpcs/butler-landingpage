@@ -13,8 +13,9 @@ const Pricing = () => {
       name: 'Founder',
       description: 'Solo founders & early-stage startups',
       features: [
-        'Full access to all 6 AI copilots',
-        'Weekly usage limits',
+        '1 project',
+        'Full access to all  AI copilots',
+        'Upto 3 team members',
         'Basic file storage',
         'Community support',
       ],
@@ -25,7 +26,7 @@ const Pricing = () => {
       description: 'Growing teams & multiple projects',
       features: [
         'Everything in Founder tier',
-        'Multiple team members',
+        'Many team members',
         'Higher usage limits',
         'Priority support',
         'Advanced integrations',
@@ -37,11 +38,11 @@ const Pricing = () => {
       description: 'Large organizations & custom deployments',
       features: [
         'Everything in Startup tier',
-        'Unlimited team members',
-        'Custom AI training',
-        'Dedicated account manager',
+        'More team members',
+        'Multiple projects',
         'SLA guarantees',
         'On-premise options',
+
       ],
       isPopular: false,
     },

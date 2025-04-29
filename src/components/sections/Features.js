@@ -6,7 +6,7 @@ const Features = () => {
     {
       title: 'Strategic Validation',
       description:
-        'Product Strategist Copilot guides you through Lean Canvas, SWOT, and rapid validation exercises.',
+        'Product Strategist Copilot guides you through Lean Canvas workshops, SWOT analyses, and rapid idea-validation sprints so you know you’re building something people want.',
       icon: (
         <svg
           width="24"
@@ -28,7 +28,7 @@ const Features = () => {
     {
       title: 'Feasibility Analysis',
       description:
-        'Automated market & technical feasibility checks to confirm viability before you invest.',
+        'Product Engineer Copilot evaluates your tech options, recommends the ideal stack and architecture, and helps you prototype proof-of-concepts before you write a single line of code.',
       icon: (
         <svg
           width="24"
@@ -64,7 +64,7 @@ const Features = () => {
     {
       title: 'Execution Planning',
       description:
-        'Product Manager & Engineer Copilots generate roadmaps, wireframes, and architecture blueprints.',
+        'Product Manager Copilot turns validated ideas into a prioritized roadmap—creating user flows, wireframes, and sprint plans so your team builds the right MVP, on time.',
       icon: (
         <svg
           width="24"
@@ -93,7 +93,7 @@ const Features = () => {
     {
       title: 'Launch with Confidence',
       description:
-        'Growth & Fundraising Copilots prepare go-to-market plans, early adopter outreach, and pitch materials.',
+        'Growth Marketer Copilot crafts your go-to-market playbook, maps out early-user acquisition channels, and optimizes retention loops to kickstart traction and fuel your launch.',
       icon: (
         <svg
           width="24"

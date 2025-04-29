@@ -63,14 +63,14 @@ const Footer = () => {
             </div>
             <span className="text-xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                AlfredX
+                Alfred Ai
               </span>
             </span>
           </div>
           
           {/* copyright */}
           <p className="text-gray-400 text-sm">
-            © {currentYear} AlfredX. All rights reserved.
+            © {currentYear} Alfred Ai. All rights reserved.
           </p>
           
           {/* built with line */}
