@@ -23,9 +23,10 @@ const Problem = () => (
         <ul className="space-y-6 text-gray-300">
           {/* ❌ Items */}
           {[
-            'Starting with a small team or alone is overwhelming',
-            'You are confused on where to start',
-            'Tools are fragmented & advice is vague'
+            'Great products die early when founders have no clear path from idea to launch.',
+            'Early-stage founders and small teams waste time and stall progress because they lack a clear',
+            'Tools are fragmented, guidance is generic, and building momentum alone is overwhelming.'
+            
           ].map((text, i) => (
             <motion.li
               key={i}
@@ -83,7 +84,7 @@ const Problem = () => (
             </h3>
           </div>
           <p className="text-xl text-gray-300">
-            Alfred AI gives you a tactical squad of AI copilots — built just for founders
+            Alfred AI gives you a tactical squad of AI copilots — built for founders and enterprises
           </p>
         </motion.div>
       </motion.div>
@@ -106,9 +107,9 @@ const Problem = () => (
             </div>
             <div>
               <h3 className="font-medium text-xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                Alfred Ai Boardroom
+                Copilot Boardroom
               </h3>
-              <p className="text-sm text-gray-400">Real startup decisions, simplified</p>
+              <p className="text-sm text-gray-400">Connect and chat with all your pilots here</p>
             </div>
           </div>
 

@@ -20,7 +20,7 @@ const Hero = () => {
                 Alfred
               </span>
               ,<br />
-              so should your product
+              so should your Startup
             </h1>
             <p className="text-xl text-gray-300 mb-12">
               Our AI copilots handle the groundwork—from ideation to launch—so you focus on building what matters.
