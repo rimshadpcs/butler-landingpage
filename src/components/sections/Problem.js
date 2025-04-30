@@ -84,7 +84,7 @@ const Problem = () => (
             </h3>
           </div>
           <p className="text-xl text-gray-300">
-            Alfred AI gives you a tactical squad of AI copilots — built for founders and enterprises
+            Alfred AI gives you a tactical squad of AI copilots — built for founders and startups
           </p>
         </motion.div>
       </motion.div>
@@ -204,7 +204,7 @@ const Problem = () => (
               <input
                 type="text"
                 className="flex-1 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-l-full px-6 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="Message your copilots..."
+                placeholder="Chat with your copilots..."
                 disabled
               />
               <button className="bg-indigo-500 hover:bg-indigo-400 text-white px-6 py-3 rounded-r-full font-medium transition">

@@ -23,7 +23,7 @@ const Hero = () => {
               so should your Startup
             </h1>
             <p className="text-xl text-gray-300 mb-12">
-              Our AI copilots handle the groundwork—from ideation to launch—so you focus on building what matters.
+            Our AI copilots handle the groundwork—from ideation to launch—so you focus on building what matters, whether you’re a lean startup or a scaling team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
