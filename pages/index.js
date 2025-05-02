@@ -6,6 +6,8 @@ import Problem             from '../src/components/sections/Problem';
 import Features            from '../src/components/sections/Features';
 import Copilots            from '../src/components/sections/Copilots';
 import BeforeAfterSection  from '../src/components/sections/BeforeAndAfter';
+import VibeProductManagement  from '../src/components/sections/VibeProductManagement';
+import IntegrateWithSection from '../src/components/sections/IntegrateWithSection';
 import Pricing             from '../src/components/sections/Pricing';
 import BuiltForSuccess     from '../src/components/sections/BuiltForSuccess';
 import Footer              from '../src/components/layout/Footer';
@@ -20,6 +22,8 @@ export default function Home() {
         <Features />         {/* 3) Then How It Works ONLY once */}
         <Copilots />
         <BeforeAfterSection />
+        <VibeProductManagement/>
+        <IntegrateWithSection/>
         <Pricing />
         <BuiltForSuccess />
       </main>

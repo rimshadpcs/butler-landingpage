@@ -16,17 +16,24 @@ const Problem = () => (
         className="space-y-8"
       >
         {/* Gradient title */}
-        <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-          The Problem We Solve
+        <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
+          <span className="flex items-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              The Problem We Solve
+            </span>
+          </span>
         </h2>
+        
+        <p className="text-xl text-gray-300">
+          Great products die early when teams lack a clear path.
+        </p>
 
         <ul className="space-y-6 text-gray-300">
           {/* ❌ Items */}
           {[
-            'Great products die early when founders have no clear path from idea to launch.',
-            'Early-stage founders and small teams waste time and stall progress because they lack a clear',
-            'Tools are fragmented, guidance is generic, and building momentum alone is overwhelming.'
-            
+            'Tools are scattered, docs are buried',
+            'MVPs take forever to ship',
+            'Priorities are unclear, accountability is missing'
           ].map((text, i) => (
             <motion.li
               key={i}
@@ -80,11 +87,11 @@ const Problem = () => (
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-              The Solution
+              The Alfred AI Solution
             </h3>
           </div>
           <p className="text-xl text-gray-300">
-            Alfred AI gives you a tactical squad of AI copilots — built for founders and startups
+            Alfred AI gives you structure, speed, and clarity — with a squad of AI copilots to plan, build, and ship products smarter.
           </p>
         </motion.div>
       </motion.div>
@@ -129,7 +136,7 @@ const Problem = () => (
                 <div className="bg-white bg-opacity-5 text-white rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
                   <p className="text-xs font-bold mb-1 text-gray-400">Founder</p>
                   <p className="text-base">
-                    I'm building <strong>Catflix</strong> — a streaming app exclusively for cat videos. What's our next step?
+                    I've validated our user persona — what's next?
                   </p>
                 </div>
               </div>
@@ -142,57 +149,49 @@ const Problem = () => (
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.0 }}
             >
-              <div className="w-10 h-10 rounded-md bg-amber-900/20 flex items-center justify-center mr-3">
-                <span className="text-amber-400">🎯</span>
+              <div className="w-10 h-10 rounded-md bg-blue-900/20 flex items-center justify-center mr-3">
+                <span className="text-blue-400">📦</span>
               </div>
               <div className="bg-white bg-opacity-5 rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
                 <p className="text-xs font-bold mb-1 text-gray-400">Product Manager Copilot</p>
-                <p className="text-base text-gray-200 mb-3">
-                  Let's lock in your MVP feature set. I'd start with:
-                </p>
-                <ul className="list-disc list-inside text-base text-gray-200 mb-3 space-y-1">
-                  <li><strong>Video upload & playback</strong> — core user flow</li>
-                  <li><strong>Category feeds</strong> — browse "Funny Cats," "Kittens," etc.</li>
-                  <li><strong>Basic search</strong> — tag-based discoverability</li>
-                </ul>
                 <p className="text-base text-gray-200">
-                  Once those are solid, we can layer on social sharing and "favorite" lists.
+                  I've scoped the MVP: 3 key features, estimated dev effort, and linked wireframes from Figma.
                 </p>
               </div>
             </motion.div>
 
-            {/* Product Strategist */}
+            {/* Project Manager */}
             <motion.div
               className="flex"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.2 }}
             >
-              <div className="w-10 h-10 rounded-md bg-blue-900/20 flex items-center justify-center mr-3">
-                <span className="text-blue-400">🧠</span>
+              <div className="w-10 h-10 rounded-md bg-amber-900/20 flex items-center justify-center mr-3">
+                <span className="text-amber-400">🎯</span>
               </div>
               <div className="bg-white bg-opacity-5 rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
-                <p className="text-xs font-bold mb-1 text-gray-400">Product Strategist Copilot</p>
+                <p className="text-xs font-bold mb-1 text-gray-400">Project Manager Copilot</p>
                 <p className="text-base text-gray-200">
-                  Let's clearly define your early adopters first. I'll generate detailed user personas—perhaps Gen Z meme enthusiasts, busy millennials seeking comfort content, or dedicated cat lovers?
+                  Next sprint draft is ready. 5 tasks assigned, 1 dependency flagged.
                 </p>
               </div>
             </motion.div>
 
-            {/* Growth MarkETER */}
+            {/* Product Engineer */}
             <motion.div
               className="flex"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1.4 }}
             >
-              <div className="w-10 h-10 rounded-md bg-green-900/20 flex items-center justify-center mr-3">
-                <span className="text-green-400">📈</span>
+              <div className="w-10 h-10 rounded-md bg-purple-900/20 flex items-center justify-center mr-3">
+                <span className="text-purple-400">🛠</span>
               </div>
               <div className="bg-white bg-opacity-5 rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
-                <p className="text-xs font-bold mb-1 text-gray-400">Growth Marketer Copilot</p>
+                <p className="text-xs font-bold mb-1 text-gray-400">Product Engineer Copilot</p>
                 <p className="text-base text-gray-200">
-                  Once we've locked down your target personas, I'll suggest channels for early traction—like going viral with short-form content on TikTok, Reddit cat communities, or niche Discord groups.
+                  I've scaffolded the backend with FastAPI + Supabase. Let's review deployment options.
                 </p>
               </div>
             </motion.div>

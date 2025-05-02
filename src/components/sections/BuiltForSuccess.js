@@ -1,4 +1,3 @@
-// BuiltForSuccess.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -8,7 +7,7 @@ const BuiltForSuccess = () => {
       {/* decorative blurs */}
       <div className="absolute top-40 left-0 w-96 h-96 bg-purple-500 opacity-5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-10 w-[500px] h-[500px] bg-blue-500 opacity-5 rounded-full blur-3xl" />
-
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity:0, y:30 }}
@@ -26,7 +25,7 @@ const BuiltForSuccess = () => {
             Alfred is designed from the ground up with builder success as the top priority.
           </p>
         </motion.div>
-
+        
         <div className="grid md:grid-cols-2 gap-8">
           <motion.div
             initial={{ opacity:0, y:30 }}

@@ -102,18 +102,12 @@ const BeforeAfterSection = () => {
       textColor: 'text-purple-400',
     },
     {
-      name: 'Growth Marketer copilot',
-      icon: '📈',
+      name: 'Project Manager copilot',
+      icon: '🎯',
       color: 'bg-amber-900/20',
       textColor: 'text-amber-400',
     },
-    
-    {
-      name: 'GTM Launch Copilot',
-      icon: '🚀',
-      color: 'bg-red-900/20',
-      textColor: 'text-red-400',
-    },
+  
   ];
 
   // animated positions for each copilot

@@ -6,7 +6,6 @@ const Hero = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden min-h-[700px] flex items-center">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          
           {/* Left side – text & CTAs */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -15,15 +14,16 @@ const Hero = () => {
             className="text-left lg:pr-8"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Batman had an{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                Alfred
+                Vibe
               </span>
-              ,<br />
-              so should your Startup
+              <span className="text-white"> product and project management.</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-12">
-            Our AI copilots handle the groundwork—from ideation to launch—so you focus on building what matters, whether you’re a lean startup or a scaling team.
+            <p className="text-xl text-gray-300 mb-6">
+              Your AI copilots help you validate ideas, build great products, and run projects — all from one collaborative workspace.
+            </p>
+            <p className="text-xl text-gray-300 italic mb-12">
+              Batman had an Alfred — so should your product.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
@@ -32,7 +32,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-3 bg-white text-black rounded-full font-semibold shadow-md text-center"
               >
-                Start Building
+                ▶ Start Free
               </motion.a>
               <motion.a
                 href="#copilots"
@@ -40,11 +40,10 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-3 border border-white rounded-full font-semibold text-center"
               >
-                Meet Copilots
+                🧠 Meet Your Copilots
               </motion.a>
             </div>
           </motion.div>
-          
           {/* Right side – just the orb GIF */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -58,7 +57,6 @@ const Hero = () => {
               className="h-full object-contain"
             />
           </motion.div>
-
         </div>
       </div>
     </section>
