@@ -11,6 +11,7 @@ import IntegrateWithSection from '../src/components/sections/IntegrateWithSectio
 import Pricing             from '../src/components/sections/Pricing';
 import BuiltForSuccess     from '../src/components/sections/BuiltForSuccess';
 import Footer              from '../src/components/layout/Footer';
+import DashboardSection from '../src/components/sections/DashboardSection';
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />             {/* 1) Hero first */}
-        <Problem />          {/* 2) Then Problem */}
+        <Problem />
+        <DashboardSection/>        
         <Features />         {/* 3) Then How It Works ONLY once */}
         <Copilots />
         <BeforeAfterSection />

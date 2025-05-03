@@ -7,211 +7,210 @@ const Problem = () => (
     <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 opacity-5 rounded-full filter blur-3xl" />
     <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500 opacity-5 rounded-full filter blur-3xl" />
     
-    <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-      {/* Left side – Problem / Solution */}
+    <div className="relative max-w-7xl mx-auto">
+      {/* Title Section - Full Width */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="space-y-8"
+        className="text-center mb-20"
       >
-        {/* Gradient title */}
-        <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
-          <span className="flex items-center">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-              The Problem We Solve
-            </span>
+        {/* Main Title */}
+        <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-8">
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+            The Problem
+          </span>
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
+            We Solve
           </span>
         </h2>
         
-        <p className="text-xl text-gray-300">
-          Great products die early when teams lack a clear path.
-        </p>
-
-        <ul className="space-y-6 text-gray-300">
-          {/* ❌ Items */}
-          {[
-            'Tools are scattered, docs are buried',
-            'MVPs take forever to ship',
-            'Priorities are unclear, accountability is missing'
-          ].map((text, i) => (
-            <motion.li
-              key={i}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 + i * 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="flex items-start"
+        {/* Subtitle with separator */}
+        <div className="flex flex-col items-center space-y-6 mb-12">
+          <p className="text-2xl sm:text-3xl md:text-4xl text-gray-100 font-bold max-w-3xl mx-auto">
+            Product teams move fast—but chaos moves faster.
+          </p>
+          
+          {/* Animated separator */}
+          <div className="flex items-center justify-center space-x-4 w-full">
+            <motion.div 
+              initial={{ width: 0 }}
+              animate={{ width: 100 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+            />
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="relative"
             >
-              <div className="flex items-center justify-center w-6 h-6 rounded-full bg-red-500 bg-opacity-20 mr-4">
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-red-400"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18" />
-                  <line x1="6" y1="6" x2="18" y2="18" />
-                </svg>
-              </div>
-              <span className="text-xl">{text}</span>
-            </motion.li>
-          ))}
-        </ul>
+              <div className="absolute inset-0 bg-purple-500 blur-md opacity-50"></div>
+              <div className="relative w-3 h-3 bg-purple-500 rotate-45"></div>
+            </motion.div>
+            <motion.div 
+              initial={{ width: 0 }}
+              animate={{ width: 100 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+            />
+          </div>
+        </div>
 
-        {/* Solution box with gradient heading */}
+        {/* Solution Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white bg-opacity-5 backdrop-filter backdrop-blur-sm p-8 rounded-2xl border border-white border-opacity-10"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="relative"
         >
-          <div className="flex items-center mb-4">
-            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500 bg-opacity-20 mr-4">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-green-400"
-              >
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-              The Alfred AI Solution
+          <div className="inline-block">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600">
+                The Alfred AI Solution
+              </span>
+              {/* Decorative underline */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 1 }}
+                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 origin-left"
+              />
             </h3>
           </div>
-          <p className="text-xl text-gray-300">
-            Alfred AI gives you structure, speed, and clarity — with a squad of AI copilots to plan, build, and ship products smarter.
-          </p>
+          
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="text-xl sm:text-2xl text-gray-300 mt-6"
+          >
+            Like Replit, but for product and project management.
+          </motion.p>
         </motion.div>
       </motion.div>
+     
+      {/* Two Column Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Problems Column */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="space-y-6">
+            {[
+              'Scattered tools, tabs, and threads break momentum',
+              'MVPs and features stall in planning hell',
+              'PMs struggle to align strategy, execution, and feedback',
+              'Founders and teams waste cycles guessing what to build next'
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="flex items-start p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all"
+              >
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-red-500 bg-opacity-20 mr-4 flex-shrink-0">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-red-400"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-white">{item}</h4>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-      {/* Right side – chat mockup */}
+        {/* Solution Column */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {/* Solution Header */}
+         
+
+          {/* Solution Points */}
+          <div className="space-y-6">
+            {[
+              'You chat with AI copilots for strategy, planning, and delivery',
+              'Product and project work happens in one flow',
+              'Every idea becomes structured, actionable, and tracked',
+              'You build smarter, ship faster, and stay in sync—from idea to impact'
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 + i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="flex items-start p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all"
+              >
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-500 bg-opacity-20 mr-4 flex-shrink-0">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="text-green-400"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-white">{item}</h4>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Bottom CTA Section */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="relative"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1, ease: [0.16, 1, 0.3, 1] }}
+        className="mt-24 text-center"
       >
-        {/* Glow effect */}
-        <div className="absolute inset-0 bg-blue-500 opacity-10 filter blur-3xl rounded-2xl" />
+        <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          Transform your product development workflow with AI-powered clarity and speed.
+        </p>
         
-        <div className="relative bg-black rounded-2xl shadow-2xl border border-white border-opacity-10 overflow-hidden">
-          {/* Chat header */}
-          <div className="bg-black bg-opacity-80 p-4 flex items-center border-b border-white border-opacity-10">
-            <div className="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center mr-4">
-              <span className="text-white text-sm font-bold">AX</span>
-            </div>
-            <div>
-              <h3 className="font-medium text-xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                Copilot Boardroom
-              </h3>
-              <p className="text-sm text-gray-400">Connect and chat with all your pilots here</p>
-            </div>
-          </div>
-
-          {/* Chat messages */}
-          <div className="p-6 bg-black bg-opacity-60 max-h-[500px] overflow-y-auto space-y-6">
-            {/* Founder */}
-            <motion.div
-              className="flex justify-end"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-white bg-opacity-10 flex items-center justify-center mr-3">
-                  <span className="text-white">👤</span>
-                </div>
-                <div className="bg-white bg-opacity-5 text-white rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
-                  <p className="text-xs font-bold mb-1 text-gray-400">Founder</p>
-                  <p className="text-base">
-                    I've validated our user persona — what's next?
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Product Manager */}
-            <motion.div
-              className="flex"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.0 }}
-            >
-              <div className="w-10 h-10 rounded-md bg-blue-900/20 flex items-center justify-center mr-3">
-                <span className="text-blue-400">📦</span>
-              </div>
-              <div className="bg-white bg-opacity-5 rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
-                <p className="text-xs font-bold mb-1 text-gray-400">Product Manager Copilot</p>
-                <p className="text-base text-gray-200">
-                  I've scoped the MVP: 3 key features, estimated dev effort, and linked wireframes from Figma.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Project Manager */}
-            <motion.div
-              className="flex"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-            >
-              <div className="w-10 h-10 rounded-md bg-amber-900/20 flex items-center justify-center mr-3">
-                <span className="text-amber-400">🎯</span>
-              </div>
-              <div className="bg-white bg-opacity-5 rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
-                <p className="text-xs font-bold mb-1 text-gray-400">Project Manager Copilot</p>
-                <p className="text-base text-gray-200">
-                  Next sprint draft is ready. 5 tasks assigned, 1 dependency flagged.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Product Engineer */}
-            <motion.div
-              className="flex"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.4 }}
-            >
-              <div className="w-10 h-10 rounded-md bg-purple-900/20 flex items-center justify-center mr-3">
-                <span className="text-purple-400">🛠</span>
-              </div>
-              <div className="bg-white bg-opacity-5 rounded-2xl p-4 max-w-xs border border-white border-opacity-10">
-                <p className="text-xs font-bold mb-1 text-gray-400">Product Engineer Copilot</p>
-                <p className="text-base text-gray-200">
-                  I've scaffolded the backend with FastAPI + Supabase. Let's review deployment options.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Message input */}
-          <div className="border-t border-white border-opacity-10 p-4 bg-black">
-            <div className="flex">
-              <input
-                type="text"
-                className="flex-1 bg-white bg-opacity-5 border border-white border-opacity-10 rounded-l-full px-6 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="Chat with your copilots..."
-                disabled
-              />
-              <button className="bg-indigo-500 hover:bg-indigo-400 text-white px-6 py-3 rounded-r-full font-medium transition">
-                Send
-              </button>
-            </div>
-          </div>
-        </div>
+        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-lg font-bold rounded-full transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+          Start Building Better
+          <svg
+            className="ml-2 w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </button>
       </motion.div>
     </div>
   </section>

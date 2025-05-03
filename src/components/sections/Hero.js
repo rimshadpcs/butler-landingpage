@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden min-h-[700px] flex items-center">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black text-white overflow-hidden">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left side – text & CTAs */}
@@ -19,12 +19,15 @@ const Hero = () => {
               </span>
               <span className="text-white"> product and project management.</span>
             </h1>
+            
             <p className="text-xl text-gray-300 mb-6">
               Your AI copilots help you validate ideas, build great products, and run projects — all from one collaborative workspace.
             </p>
+            
             <p className="text-xl text-gray-300 italic mb-12">
               Batman had an Alfred — so should your product.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.a
                 href="#try"
@@ -34,17 +37,19 @@ const Hero = () => {
               >
                 ▶ Start Free
               </motion.a>
+              
               <motion.a
                 href="#copilots"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-3 border border-white rounded-full font-semibold text-center"
               >
-                🧠 Meet Your Copilots
+                 Meet Your Copilots
               </motion.a>
             </div>
           </motion.div>
-          {/* Right side – just the orb GIF */}
+          
+          {/* Right side – orb GIF */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -54,7 +59,7 @@ const Hero = () => {
             <img
               src="/images/orb1.gif"
               alt="Orb"
-              className="h-full object-contain"
+              className="h-full w-auto object-contain max-w-full"
             />
           </motion.div>
         </div>
