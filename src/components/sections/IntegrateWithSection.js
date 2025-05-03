@@ -69,7 +69,7 @@ const IntegrateWithSection = () => {
     },
     {
       name: 'Microsoft Teams',
-      logo: '/images/teams-logo.png'
+      logo: '/images/teams.png'
     },
     {
       name: 'Google Calendar',
