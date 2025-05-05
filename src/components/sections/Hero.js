@@ -21,7 +21,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-6">
-              Your AI copilots help you validate ideas, build great products, and run projects — all from one collaborative workspace.
+            AI copilots to validate ideas, shape roadmaps, and run sprints — all in one fluid flow.
             </p>
             
             <p className="text-xl text-gray-300 italic mb-12">

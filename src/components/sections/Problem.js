@@ -15,79 +15,23 @@ const Problem = () => (
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="text-center mb-20"
       >
-        {/* Main Title */}
-        <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-8">
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
-            The Problem
-          </span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
-            We Solve
+        <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
+          <span className="flex items-center justify-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              The Problem We Solve
+            </span>
           </span>
         </h2>
         
-        {/* Subtitle with separator */}
-        <div className="flex flex-col items-center space-y-6 mb-12">
-          <p className="text-2xl sm:text-3xl md:text-4xl text-gray-100 font-bold max-w-3xl mx-auto">
-            Product teams move fast—but chaos moves faster.
-          </p>
-          
-          {/* Animated separator */}
-          <div className="flex items-center justify-center space-x-4 w-full">
-            <motion.div 
-              initial={{ width: 0 }}
-              animate={{ width: 100 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
-            />
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-purple-500 blur-md opacity-50"></div>
-              <div className="relative w-3 h-3 bg-purple-500 rotate-45"></div>
-            </motion.div>
-            <motion.div 
-              initial={{ width: 0 }}
-              animate={{ width: 100 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"
-            />
-          </div>
-        </div>
-
-        {/* Solution Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="relative"
-        >
-          <div className="inline-block">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 relative">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600">
+        <p className="text-xl sm:text-2xl text-gray-100 font-bold max-w-3xl mx-auto">
+          Product teams move fast—but chaos moves faster.
+        </p>
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                 The Alfred AI Solution
               </span>
-              {/* Decorative underline */}
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 1 }}
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 origin-left"
-              />
-            </h3>
-          </div>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="text-xl sm:text-2xl text-gray-300 mt-6"
-          >
-            Like Replit, but for product and project management.
-          </motion.p>
-        </motion.div>
+              <p className="text-lg text-gray-300">
+              Like Replit, but for product and project management.
+            </p>
       </motion.div>
      
       {/* Two Column Layout */}
