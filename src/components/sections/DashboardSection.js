@@ -240,7 +240,8 @@ const DashboardSection = () => {
   );
 
   return (
-    <div className="h-screen w-full bg-black flex items-center justify-center p-8 relative overflow-hidden" ref={dashboardRef}>
+    <div id="DashboardSection" className="h-screen w-full bg-black flex items-center justify-center p-8 relative overflow-hidden" ref={dashboardRef}>
+
       {/* Decorative elements matching Problem page */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 opacity-5 rounded-full filter blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-blue-500 opacity-5 rounded-full filter blur-3xl" />
