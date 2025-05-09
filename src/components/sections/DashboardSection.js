@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
+// ⬆️  very top of DashboardSection.js
 import {
   Brain,
   Calendar,
@@ -14,16 +15,33 @@ import {
   Layers,
   Target,
   Grid,
+  Paperclip,
   TrendingUp,
   Send,
   MoreVertical,
   Plus,
   ArrowRight,
   Bot,
-  PencilLine,      
-  Maximize2,      
-  X  
+  PencilLine,
+  Maximize2,
+  X,
+  /* ---- new icons ---- */
+  FileText,
+  BookText,
+  Map,
+  Rocket,
+  Lightbulb,
+  HelpCircle,
+  FlaskConical,
+  CalendarRange,
+  ClipboardCheck,
+  Activity,
+  Link,
+  AlertOctagon,
+  RotateCcw,
+  PackageCheck
 } from 'lucide-react';
+
 
 const DashboardSection = () => {
   // Reference for scroll animation
@@ -186,14 +204,44 @@ const DashboardSection = () => {
   // sidebar items
   const sidebarItems = [
     { icon: BarChart3, label: 'Dashboard' },
-    { icon: Brain, label: 'PM Copilot' },
-    { icon: Calendar, label: 'PJ Copilot' },
-    { icon: Folder, label: 'Projects', count: 5 },
-    { icon: Users, label: 'Team', count: 8 },
+  
+    {
+      icon: Brain,
+    label: 'PM Copilot',
+    children: [
+      { icon: FileText,     label: 'PRD',            color: 'text-indigo-600' },
+      { icon: BookText,     label: 'User Stories',   color: 'text-amber-600' },
+      { icon: Map,          label: 'Roadmaps',       color: 'text-emerald-600' },
+      { icon: Rocket,       label: 'Release Notes',  color: 'text-rose-600' },
+      { icon: Lightbulb,    label: 'Feature Briefs', color: 'text-sky-600' },
+      { icon: HelpCircle,   label: 'Internal FAQs',  color: 'text-fuchsia-600' },
+      { icon: FlaskConical, label: 'Experiments',    color: 'text-cyan-600' }
+    ]
+  },
+
+  
+    {
+      icon: Calendar,
+    label: 'PJ Copilot',
+    children: [
+      { icon: ClipboardCheck, label: 'Sprint Boards',    color: 'text-pink-600' },
+      { icon: CalendarRange,  label: 'Release Calendar', color: 'text-orange-600' },
+      { icon: ClipboardCheck, label: 'Dev Assignments',  color: 'text-lime-600' },
+      { icon: Activity,       label: 'Velocity Charts',  color: 'text-blue-600' },
+      { icon: Link,           label: 'Dependencies',     color: 'text-red-600' },
+      { icon: AlertOctagon,   label: 'Blockers Log',     color: 'text-purple-600' },
+      { icon: RotateCcw,      label: 'Retro Notes',      color: 'text-teal-600' },
+      { icon: PackageCheck,   label: 'Delivery Tracker', color: 'text-stone-600' }
+    ]
+  },
+  
+    { icon: Folder,  label: 'Projects',  count: 5 },
+    { icon: Users,   label: 'Team',      count: 8 },
     { icon: CheckCircle2, label: 'Tasks', count: 24 },
     { icon: Layers, label: 'Integrations' },
     { icon: Settings, label: 'Settings' }
   ];
+  
 
   useEffect(() => {
     // Initialize component
@@ -279,40 +327,71 @@ const DashboardSection = () => {
             </div>
 
             <nav className="space-y-1">
-              {sidebarItems.map((item) => (
-                <button
-                  key={item.label}
-                  onClick={() => {
-                    setActiveTab(item.label.toLowerCase());
-                    if (item.label === 'PM Copilot') {
-                      setActiveCopilot('pm');
-                      setShowPmChat(true);
-                      setShowPjChat(false);
-                    } else if (item.label === 'PJ Copilot') {
-                      setActiveCopilot('pj');
-                      setShowPmChat(false);
-                      setShowPjChat(true);
-                    }
-                  }}
-                  className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition
-                    ${
-                      (item.label === 'PM Copilot' && activeCopilot === 'pm') ||
-                      (item.label === 'PJ Copilot' && activeCopilot === 'pj') ||
-                      (activeTab === item.label.toLowerCase() && !['pm copilot', 'pj copilot'].includes(activeTab))
-                        ? 'bg-purple-100 text-purple-700'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <item.icon className="w-5 h-5" />
-                    <span className="text-sm font-medium">{item.label}</span>
-                  </div>
-                  {item.count && (
-                    <span className="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full">{item.count}</span>
-                  )}
-                </button>
-              ))}
-            </nav>
+  {sidebarItems.map((item) => {
+    // determine if this top‑level item is “active”
+    const isActive =
+      (item.label === 'PM Copilot' && activeCopilot === 'pm') ||
+      (item.label === 'PJ Copilot' && activeCopilot === 'pj') ||
+      (activeTab === item.label.toLowerCase() &&
+        !['pm copilot', 'pj copilot'].includes(activeTab));
+
+    return (
+      <React.Fragment key={item.label}>
+        {/* top‑level button */}
+        <button
+          onClick={() => {
+            setActiveTab(item.label.toLowerCase());
+            if (item.label === 'PM Copilot') {
+              setActiveCopilot('pm');
+              setShowPmChat(true);
+              setShowPjChat(false);
+            } else if (item.label === 'PJ Copilot') {
+              setActiveCopilot('pj');
+              setShowPmChat(false);
+              setShowPjChat(true);
+            }
+          }}
+          className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition ${
+            isActive ? 'bg-purple-100 text-purple-700'
+                     : 'text-gray-700 hover:bg-gray-100'
+          }`}
+        >
+          <div className="flex items-center gap-3">
+            <item.icon className="w-5 h-5" />
+            <span className="text-sm font-medium">{item.label}</span>
+          </div>
+          {item.count && (
+            <span className="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full">
+              {item.count}
+            </span>
+          )}
+        </button>
+
+        {/* child links (only for the active copilot) */}
+        {item.children && isActive && (
+          <div className="ml-8 mt-1 space-y-1">
+            {item.children.map((child) => (
+              <button
+                key={child.label}
+                onClick={() => console.log('clicked', child.label)}
+                className={`
+                  w-full flex items-center gap-2 px-2 py-1 rounded-md text-xs
+                  hover:bg-gray-100
+                  ${child.color ?? 'text-gray-600'}
+                `}
+                
+              >
+                <child.icon className="w-4 h-4" />
+                {child.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </React.Fragment>
+    );
+  })}
+</nav>
+
           </div>
 
           {/* MAIN COLUMN */}
@@ -427,6 +506,9 @@ const DashboardSection = () => {
 
       {/* input */}
       <div className="border-t border-purple-100 px-3 py-2 flex gap-2">
+      <button className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200">
+    <Paperclip className="w-4 h-4 text-gray-600" />
+  </button>
         <input
           placeholder="Ask Copilot"
           className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-purple-500"

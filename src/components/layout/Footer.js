@@ -76,7 +76,7 @@ const Footer = () => {
           {/* built with line */}
           <p className="text-sm mt-4 md:mt-0">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-              Built with 🤍 by founders, for founders
+              Built with 🤍 by startup, for startups and enterprises
             </span>
           </p>
         </div>

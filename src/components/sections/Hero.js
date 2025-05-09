@@ -21,7 +21,10 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-6">
-            AI copilots to validate ideas, shape roadmaps, and run sprints — all in one fluid flow.
+            Vibe Product & Project Management — with AI Copilots
+            </p>
+            <p className="text-xl text-gray-400 mb-6">
+            Chat. Plan. Ship. In one place. No chaos  
             </p>
             
             <p className="text-xl text-gray-300 italic mb-12">

@@ -44,10 +44,11 @@ const Problem = () => (
         >
           <div className="space-y-6">
             {[
-              'Scattered tools, tabs, and threads break momentum',
+              'Scattered tabs, docs, and dashboards kill momentum',
               'MVPs and features stall in planning hell',
-              'PMs struggle to align strategy, execution, and feedback',
-              'Founders and teams waste cycles guessing what to build next'
+              'PMs and project leads juggle docs, priorities, blockers',
+              'Strategy, execution, and feedback constantly fall out of sync',
+              'Teams waste time second-guessing: “What do we build next?”'
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -92,10 +93,11 @@ const Problem = () => (
           {/* Solution Points */}
           <div className="space-y-6">
             {[
-              'You chat with AI copilots for strategy, planning, and delivery',
-              'Product and project work happens in one flow',
-              'Every idea becomes structured, actionable, and tracked',
-              'You build smarter, ship faster, and stay in sync—from idea to impact'
+              'One fluid space, powered by AI copilots',
+              'Strategy, planning, and sprints happen in one ongoing conversation',
+              'MVPs turn into live roadmaps, tracked tasks, and sprint plans',
+              'Every insight, idea, and plan is structured, actionable, and versioned',
+              'You build smarter, ship faster, and stay aligned — from idea to launch'
             ].map((item, i) => (
               <motion.div
                 key={i}

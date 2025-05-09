@@ -62,7 +62,7 @@ const Copilots = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto italic"
           >
-            Collaborate with AI copilots like they're part of your team.
+            Vibe with AI copilots who think like your team — but faster, 24/7.
           </motion.p>
         </div>
 

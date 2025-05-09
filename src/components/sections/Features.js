@@ -5,24 +5,24 @@ const Features = () => {
   // Define steps as an array of objects with updated content
   const steps = [
     {
-      title: "Strategic Validation",
-      description: "Product Strategist Copilot walks you through Lean Canvas, SWOT, and persona mapping to align on problem-solution fit.",
-      icon: "🧠"
-    },
-    {
-      title: "Planning & Prioritization",
-      description: "Product Manager Copilot turns strategy into a real product plan — with user flows, wireframes, and MVP scope.",
+      title: "Feature Prioritization",
+      description: "Product Manager CopilotTurns rough ideas into structured roadmaps using RICE/MoSCoW, auto-generates user stories, and organizes MVP scope.",
       icon: "📦"
     },
     {
-      title: "Tech Feasibility & Setup",
-      description: "Product Engineer Copilot recommends the best tech stack, scaffolds infra, and connects your repos and CI/CD pipeline.",
-      icon: "🛠"
+      title: "Planning Into Motion",
+      description: " Product Manager Copilot Maps out user journeys and wireframes, surfaces potential tradeoffs, and auto-syncs documentation like PRDs and release notes.",
+      icon: "🧭"
     },
     {
-      title: "Sprint Management",
-      description: "Project Manager Copilot helps you assign tasks, track progress, and stay unblocked — with daily standups and smart summaries.",
-      icon: "🎯"
+      title: "Sprint Orchestration",
+      description: " Project Manager Copilot Breaks roadmap into actionable sprints, assigns owners, and highlights blockers in real time.",
+      icon: "🚦"
+    },
+    {
+      title: "Daily Momentum",
+      description: "Project Manager Copilot Posts automated standups, tracks velocity, and keeps the team synced — without status meetings or micromanagement.",
+      icon: "🗓"
     }
   ];
 
@@ -50,8 +50,8 @@ const Features = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A unified platform to build remarkable products—no more tool-switching,
-            no more confusion.
+          A vibe-driven experience for product & project teams —  
+          fast, fluid, and frustration-free.
           </p>
         </motion.div>
 

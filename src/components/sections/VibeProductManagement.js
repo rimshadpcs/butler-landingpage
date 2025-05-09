@@ -38,7 +38,10 @@ const VibeProductManagement = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Product building should feel smooth — like designing, not dragging. Alfred AI removes friction so you can:
+          From vibe coding to vibe managing —
+Designers have Figma.
+Devs have Replit.
+Now Product & Project Managers have Alfred AI.
           </p>
         </motion.div>
         
@@ -46,7 +49,7 @@ const VibeProductManagement = () => {
         <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
           {[
             "Think in flows, not files",
-            "Talk, sketch, and ship in one space",
+            "Plan, align, and deliver — without breaking flow",
             "Move with momentum, not only meetings"
           ].map((item, index) => (
             <motion.div
