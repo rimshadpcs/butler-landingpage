@@ -555,6 +555,10 @@ const DashboardSection = () => {
 
       {/* input */}
       <div className="border-t border-pink-100 px-3 py-2 flex gap-2">
+
+      <button className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200">
+    <Paperclip className="w-4 h-4 text-gray-600" />
+  </button>
         <input
           placeholder="Ask Copilot"
           className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-pink-500"
